@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111b2d">
+  <title>A Letter Just For You | Birthday Wishes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">A LETTER FOR YOU <span>✦</span></a>
+    <div class="header-note">MADE WITH ZM</div>
+  </header>
+
+  <main class="container">
+
+    <!-- HALAMAN UTAMA -->
+    <section class="hero" id="home">
+      <div class="eyebrow">A LITTLE SURPRISE FOR SOMEONE SPECIAL</div>
+
+      <h1>
+        Some feelings are<br>
+        best written in a <em>letter.</em>
+      </h1>
+
+     
+
+     
+
+        <input
+          type="text"
+          id="recipient"
+          maxlength="60"
+          placeholder="Masukkan nama penerima..."
+          autocomplete="off"
+        >
+
+        <div class="section-title">Choose your letter</div>
+
+        <p class="hint">
+          Pilih surat yang paling cocok untuk menyampaikan perasaanmu.
+        </p>
+
+        <div class="designs">
+
+          <button type="button"
+            class="design selected"
+            data-design="navy"
+            aria-pressed="true">
+
+            <div class="envelope-preview navy">
+              <span>✉</span>
+              <i>✦</i>
+            </div>
+
+            <strong>Midnight</strong>
+            <small>Elegant & timeless</small>
+          </button>
+
+          <button type="button"
+            class="design"
+            data-design="ivory"
+            aria-pressed="false">
+
+            <div class="envelope-preview ivory">
+              <span>✧</span>
+              <i>✦</i>
+            </div>
+
+            <strong>Vanilla</strong>
+            <small>Soft & sincere</small>
+          </button>
+
+          <button type="button"
+            class="design"
+            data-design="wine"
+            aria-pressed="false">
+
+            <div class="envelope-preview wine">
+              <span>♥</span>
+              <i>✦</i>
+            </div>
+
+            <strong>Velvet</strong>
+            <small>Deep & romantic</small>
+          </button>
+
+        </div>
+
+        <div class="error-message" id="errorMessage" role="alert"></div>
+
+        <button type="button" class="primary-btn" id="createBtn">
+          CREATE YOUR LETTER <span>→</span>
+        </button>
+
+    </section>
+
+    <!-- HALAMAN SURAT -->
+    <section id="letterScreen" class="letter-screen" hidden>
+
+      <button type="button" class="back-btn" id="backBtn">
+        ← Kembali ke halaman utama
+      </button>
+
+      <div class="eyebrow">A LETTER MADE JUST FOR YOU</div>
+
+      <h2 class="letter-heading">
+        A little surprise, just for you. ♡
+      </h2>
+
+      <p class="letter-hint">
+        Klik amplop di bawah ini untuk membuka suratmu.
+      </p>
+
+      <div
+        class="letter-stage theme-navy"
+        id="letterStage"
+        role="button"
+        tabindex="0"
+        aria-label="Klik untuk membuka surat"
+        aria-expanded="false"
+      >
+
+        <div class="paper">
+          <div class="paper-star">✦</div>
+          <div class="paper-title">For someone special</div>
+          <p class="paper-desc">
+            Ada pesan kecil yang menunggumu di dalam surat ini.
+            Bukalah dan temukan kata-kata yang disiapkan khusus untukmu.
+          </p>
+          <div class="paper-heart">♡</div>
+        </div>
+
+        <div class="envelope-body"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-seal">♥</div>
+
+      </div>
+
+      <p class="tap-label" id="tapLabel">
+        TAP TO OPEN ✦
+      </p>
+
+      <!-- KARTU UCAPAN -->
+      <article class="birthday-card" id="birthdayCard" hidden>
+
+        <div class="card-decoration">✦　✧　✦</div>
+
+        <div class="card-eyebrow">
+          A SPECIAL DAY FOR A SPECIAL SOUL
+        </div>
+
+        <h2 class="card-title">Happy Birthday,</h2>
+
+        <div class="card-name" id="cardName"></div>
+
+        <div class="card-message" id="cardMessage"></div>
+
+        <div class="signature">
+          May life be as beautiful as your soul ♡
+        </div>
+
+        <div class="card-bottom">─────── ✧ ───────</div>
+
+      </article>
+
+      <div class="actions" id="cardActions" hidden>
+        <button type="button" class="secondary-btn" id="newBtn">
+          ↻ Buat Surat Baru
+        </button>
+
+        <button type="button" class="secondary-btn" id="copyBtn">
+          ♡ Salin Ucapan
+        </button>
+      </div>
+
+      <p class="footer-note">
+        A MOMENT TO REMEMBER, A FEELING TO KEEP. 💌
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    CRAFTED WITH ZM <span>✦</span> ONE LETTER AT A TIME
+  </footer>
+
+  <div class="floating-effects" id="floatingEffects"
+    aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
